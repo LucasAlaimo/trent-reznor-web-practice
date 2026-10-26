@@ -1,0 +1,16 @@
+@use "abstracts/variables" as vars;
+@use "base/reset";
+@use "base/typography";
+@use "layout/header";
+@use "sections/hero";
+@use "sections/about";
+@use "sections/skills";
+@use "sections/work";
+@use "sections/contact";
+@use "sections/documentation";
+@use "layout/footer";
+@use "base/mode";
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+}

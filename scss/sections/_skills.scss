@@ -1,0 +1,37 @@
+
+@use "../abstracts/variables" as vars;
+
+.skills {
+    padding: 4rem 2rem;
+    border-bottom: 1px solid var(--color-border);
+    h2 {
+        margin: 0 0 2.5rem;
+        font-size: 4rem;
+        color: var(--color-text);
+    }
+
+    .skills-list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: flex;
+            align-items: flex-end;
+
+            min-height: 140px;
+            padding: 1.5rem;
+            border: 1px solid var(--color-border);
+
+            font-family: vars.$font-mono;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--color-text);
+        }
+    }
+}

@@ -1,0 +1,60 @@
+
+@use "../abstracts/variables" as vars;
+
+.contact {
+    padding: 4rem 2rem;
+    border-bottom: 1px solid var(--color-border);
+
+    h2 {
+        margin: 0 0 2.5rem;
+        font-size: 4rem;
+        color: var(--color-text);
+    }
+
+    .social-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        display: grid;
+        gap: 0.75rem;
+
+        li {
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                min-height: 90px;
+                padding: 1.5rem 2rem;
+
+                background-color: var(--color-surface);
+                border: 1px solid var(--color-border);
+                color: var(--color-text);
+
+                text-decoration: none;
+                font-family: vars.$font-display;
+                font-size: 2rem;
+                text-transform: uppercase;
+
+                &::after {
+                    content: "→";
+                    font-family: vars.$font-body;
+                    font-size: 2rem;
+                }
+
+                &:hover,
+                &:focus-visible {
+                    background-color: var(--color-accent);
+                    border-color: var(--color-accent);
+                    color: var(--color-on-accent);
+                }
+
+                &:focus-visible {
+                    outline: 2px solid var(--color-text);
+                    outline-offset: 3px;
+                }
+            }
+        }
+    }
+}

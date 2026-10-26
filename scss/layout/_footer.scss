@@ -1,0 +1,74 @@
+
+@use "../abstracts/variables" as vars;
+
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+
+    padding: 3rem 2rem;
+
+    background-color: var(--color-background);
+    border-top: 2px solid var(--color-accent);
+
+    .footer-info {
+        p {
+            margin: 0;
+
+            &:first-child {
+                font-family: vars.$font-display;
+                font-size: 1.5rem;
+                text-transform: uppercase;
+                color: var(--color-text);
+            }
+
+            &:last-child {
+                margin-top: 0.75rem;
+                font-family: vars.$font-mono;
+                font-size: 0.8rem;
+                color: var(--color-muted);
+            }
+        }
+    }
+
+    .footer-links {
+        text-align: right;
+
+
+a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.75rem 1.25rem;
+    border: 1px solid var(--color-border);
+
+    font-family: vars.$font-mono;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color-text);
+
+    transition: background-color 0.2s ease,
+                color 0.2s ease;
+
+    &:hover,
+    &:focus-visible {
+        background-color: var(--color-accent);
+        border-color: var(--color-accent);
+        color: var(--color-on-accent);
+    }
+}
+
+        
+        p {
+            margin: 0.75rem 0 0;
+            font-family: vars.$font-mono;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--color-muted);
+        }
+    }
+}

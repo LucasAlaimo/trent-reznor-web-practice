@@ -1,0 +1,28 @@
+
+@use "../abstracts/variables" as vars;
+
+.about {
+    display: grid;
+    grid-template-columns: 240px minmax(0, 660px);
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    padding: 4rem 2rem;
+    border-bottom: 1px solid var(--color-border);
+    
+    h2 {
+        margin: 0;
+        font-size: 6rem;
+        color: var(--color-text);
+    }
+
+    p {
+        margin: 0;
+        max-width: 70ch;
+
+        font-family: vars.$font-body;
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+}

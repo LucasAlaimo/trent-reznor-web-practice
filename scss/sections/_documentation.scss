@@ -1,0 +1,67 @@
+
+@use "../abstracts/variables" as vars;
+
+.documentation {
+    padding: 4rem 2rem;
+    border-bottom: 1px solid var(--color-border);
+
+    h2 {
+        margin: 0 0 2rem;
+        font-size: 4rem;
+        color: var(--color-text);
+    }
+
+    p {
+        max-width: 65ch;
+        margin: 0 0 2.5rem;
+
+        font-family: vars.$font-body;
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: var(--color-muted);
+    }
+
+    .documentation-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        min-height: 100px;
+        padding: 1.5rem 2rem;
+
+        background-color: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-left: 4px solid var(--color-accent);
+
+        color: var(--color-text);
+        text-decoration: none;
+        text-transform: uppercase;
+
+        font-family: vars.$font-mono;
+        font-size: 1rem;
+        font-weight: 700;
+
+        &::after {
+            content: "↗";
+            font-family: vars.$font-body;
+            font-size: 2rem;
+            color: var(--color-accent);
+        }
+
+        &:hover,
+        &:focus-visible {
+            background-color: var(--color-accent);
+            border-color: var(--color-accent);
+            color: var(--color-on-accent);
+
+            &::after {
+                color: var(--color-on-accent);
+            }
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--color-text);
+            outline-offset: 3px;
+        }
+    }
+}

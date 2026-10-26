@@ -1,0 +1,32 @@
+@use "../abstracts/variables" as vars;
+
+// DARK MODE (predeterminado)
+
+:root {
+    --color-background: #{vars.$black};
+    --color-text: #{vars.$paper};
+
+    --color-surface: #191919;
+    --color-border: #444;
+    --color-muted: #aaa;
+
+    --color-accent: #{vars.$orange};
+    --color-on-accent: #{vars.$black};
+}
+
+// LIGHT MODE
+
+:root[data-theme="light"] {
+    --color-background: #{vars.$paper};
+    --color-text: #{vars.$black};
+
+    --color-surface: #d8d4ca;
+    --color-border: #77736a;
+    --color-muted: #484640;
+
+    --color-accent: #{vars.$orange};
+    --color-on-accent: #{vars.$black};
+}
+
+
+//":root" : selector CSS que identifica el elemento raíz del documento.

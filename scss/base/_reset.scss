@@ -1,0 +1,14 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box; // Esto significa que el padding y los bordes se suman al ancho declarado del elemento.
+}
+
+body{
+    margin:0;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
